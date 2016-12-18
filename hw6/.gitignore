@@ -1,0 +1,7 @@
+*.csv
+*.ssv
+*.h5
+*.bin
+*.ipynb
+data/
+svd_train
