@@ -24,10 +24,10 @@
 const bool READ_FROM_BINARY = true;
 const bool INIT_FROM_FILE = !true;
 
-// Parameters
-const int N_SVD_FEATURES = 300;
-const long long int N_ITERS = 300000000;
-const float L_RATE = 0.1;
+// Parameters, test RMSE = 0.96
+const int N_SVD_FEATURES = 100;
+const long long int N_ITERS = 100000000;
+const float L_RATE = 0.05;
 
 // Dataset-specific parameters
 const int N_ROWS = 100000000;
