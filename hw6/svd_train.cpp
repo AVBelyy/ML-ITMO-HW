@@ -103,16 +103,16 @@ int main() {
     // Reading dataset
     printf("Start reading dataset...\n");
     if (READ_FROM_BINARY) {
-        FILE * f = fopen("train.bin", "rb");
+        FILE * f = fopen("learn.bin", "rb");
         fread(&df, sizeof(df), 1, f);
         fclose(f);
     } else {
         FILE * f = fopen("data/learn.ssv", "r");
         fscanf(f, "%*s%*s%*s");
         while (!feof(f)) {
-            fscanf(f, "%*d%d%d%d", &df.rows[df.n_rows].user
-                                 , &df.rows[df.n_rows].item
-                                 , &df.rows[df.n_rows].rating);
+            fscanf(f, "%d%d%d", &df.rows[df.n_rows].user
+                              , &df.rows[df.n_rows].item
+                              , &df.rows[df.n_rows].rating);
             df.n_rows++;
         }
         fclose(f);
